@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Debris.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Stone_Shadow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Stone_LeftOver.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/stone_boulder.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Actual.gd" type="Script" id=5]
+
+[node name="Stone_Debris" type="Node2D"]
+show_behind_parent = true
+script = ExtResource( 1 )
+shadow = ExtResource( 2 )
+actualPreload = ExtResource( 3 )
+grav = 5.23
+
+[node name="Actual" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+

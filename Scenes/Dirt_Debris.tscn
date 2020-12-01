@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Debris.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/dirt.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Actual.gd" type="Script" id=3]
+
+[node name="Dirt_Debris" type="Node2D"]
+show_behind_parent = true
+script = ExtResource( 1 )
+grav = 5.35
+
+[node name="Actual" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
